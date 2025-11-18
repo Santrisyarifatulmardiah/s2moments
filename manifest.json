@@ -1,0 +1,28 @@
+{
+  "name": "S2Moments - Undangan Digital Modern & Elegan",
+  "short_name": "S2Moments",
+  "description": "Buat undangan pernikahan digital yang modern, elegan, dan interaktif dengan S2Moments",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFDF8",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://i.imgur.com/LX42OMF.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://i.imgur.com/LX42OMF.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "social"],
+  "lang": "id",
+  "dir": "ltr"
+}
+
