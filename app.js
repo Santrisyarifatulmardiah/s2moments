@@ -25,9 +25,19 @@ const App = {
         const setViewportHeight = () => {
             // Get the actual viewport height (accounts for address bar)
             const vh = window.innerHeight * 0.01;
-            // Set CSS custom property
+            const vw = window.innerWidth * 0.01;
+
+            // Set CSS custom properties
             document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
             document.documentElement.style.setProperty('--vh', `${vh}px`);
+            document.documentElement.style.setProperty('--vw', `${vw}px`);
+
+            // Fix for iOS safe area insets
+            const safeAreaTop = getComputedStyle(document.documentElement).getPropertyValue('--safe-area-inset-top') || '0px';
+            const safeAreaBottom = getComputedStyle(document.documentElement).getPropertyValue('--safe-area-inset-bottom') || '0px';
+
+            document.documentElement.style.setProperty('--safe-top', safeAreaTop);
+            document.documentElement.style.setProperty('--safe-bottom', safeAreaBottom);
         };
 
         // Set on load
@@ -38,22 +48,51 @@ const App = {
         window.addEventListener('resize', () => {
             // Debounce to avoid excessive calls
             clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(setViewportHeight, 100);
-        });
+            resizeTimer = setTimeout(setViewportHeight, 150);
+        }, { passive: true });
 
         // Update on orientation change
         window.addEventListener('orientationchange', () => {
-            setTimeout(setViewportHeight, 100);
+            // Wait for orientation to fully complete
+            setTimeout(setViewportHeight, 200);
         });
 
         // Also update on scroll for iOS to handle address bar changes
-        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+        const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+        const isAndroid = /Android/.test(navigator.userAgent);
+
+        if (isIOS || isAndroid) {
             let scrollTimer;
+            let lastScrollY = window.scrollY;
+
             window.addEventListener('scroll', () => {
-                clearTimeout(scrollTimer);
-                scrollTimer = setTimeout(setViewportHeight, 100);
+                // Only update if scroll position changed significantly
+                if (Math.abs(window.scrollY - lastScrollY) > 50) {
+                    clearTimeout(scrollTimer);
+                    scrollTimer = setTimeout(() => {
+                        setViewportHeight();
+                        lastScrollY = window.scrollY;
+                    }, 150);
+                }
             }, { passive: true });
         }
+
+        // Handle visibility change (when user switches tabs/apps)
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden) {
+                setTimeout(setViewportHeight, 100);
+            }
+        });
+
+        // Prevent zoom on double tap for iOS
+        let lastTouchEnd = 0;
+        document.addEventListener('touchend', (event) => {
+            const now = Date.now();
+            if (now - lastTouchEnd <= 300) {
+                event.preventDefault();
+            }
+            lastTouchEnd = now;
+        }, { passive: false });
     },
     
     // ===== RENDER CONTENT =====
