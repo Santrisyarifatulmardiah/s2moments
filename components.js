@@ -195,6 +195,113 @@ const Components = {
         `;
     },
 
+    // ===== CATALOG SECTION =====
+    renderCatalog() {
+        return `
+            <section id="catalog" class="py-10 sm:py-14 md:py-16 bg-white" x-data="{ activeCatalog: 'wedding', activeTab: 'premium' }">
+                <div class="container mx-auto px-4 sm:px-6">
+                    <!-- Section Header -->
+                    <div class="text-center mb-8 sm:mb-10 scroll-animate">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-brand-dark">Pilih <span class="text-brand-gold">Katalog</span></h2>
+                        <p class="mt-2 text-sm sm:text-base text-gray-600">Pilih katalog sesuai kebutuhan acara Anda</p>
+                    </div>
+
+                    <!-- Catalog Buttons -->
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-10 max-w-4xl mx-auto scroll-animate">
+                        <!-- Katalog Wedding Button -->
+                        <button @click="activeCatalog = 'wedding'; activeTab = 'premium'"
+                                :class="activeCatalog === 'wedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-2xl scale-105' : 'bg-white text-brand-dark border-2 border-amber-200 hover:border-brand-gold shadow-lg hover:shadow-xl'"
+                                class="group relative flex-1 overflow-hidden rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 active:scale-95">
+                            <!-- Background decoration -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                            <!-- Icon -->
+                            <div class="relative flex justify-center mb-4">
+                                <div :class="activeCatalog === 'wedding' ? 'bg-white/20' : 'bg-gradient-to-br from-yellow-400 to-amber-500'" class="inline-flex p-4 rounded-full">
+                                    <svg class="w-10 h-10 sm:w-12 sm:h-12" :class="activeCatalog === 'wedding' ? 'text-white' : 'text-white'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Text -->
+                            <h3 class="relative text-xl sm:text-2xl font-bold font-serif mb-2">Katalog Wedding</h3>
+                            <p class="relative text-sm sm:text-base opacity-90">Tema untuk acara pernikahan</p>
+                        </button>
+
+                        <!-- Katalog Non-Wedding Button -->
+                        <button @click="activeCatalog = 'nonwedding'; activeTab = 'engagement'"
+                                :class="activeCatalog === 'nonwedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-2xl scale-105' : 'bg-white text-brand-dark border-2 border-amber-200 hover:border-brand-gold shadow-lg hover:shadow-xl'"
+                                class="group relative flex-1 overflow-hidden rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 active:scale-95">
+                            <!-- Background decoration -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                            <!-- Icon -->
+                            <div class="relative flex justify-center mb-4">
+                                <div :class="activeCatalog === 'nonwedding' ? 'bg-white/20' : 'bg-gradient-to-br from-yellow-400 to-amber-500'" class="inline-flex p-4 rounded-full">
+                                    <svg class="w-10 h-10 sm:w-12 sm:h-12" :class="activeCatalog === 'nonwedding' ? 'text-white' : 'text-white'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <!-- Text -->
+                            <h3 class="relative text-xl sm:text-2xl font-bold font-serif mb-2">Katalog Non-Wedding</h3>
+                            <p class="relative text-sm sm:text-base opacity-90">Tema untuk acara lainnya</p>
+                        </button>
+                    </div>
+
+                    <!-- Category Tabs - Wedding -->
+                    <div x-show="activeCatalog === 'wedding'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+                        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 scroll-animate overflow-x-auto pb-2">
+                            <button @click="activeTab = 'premium'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'premium', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'premium'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Premium</button>
+                            <button @click="activeTab = 'adat'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'adat', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'adat'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Adat</button>
+                            <button @click="activeTab = 'flora'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'flora', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'flora'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Floral</button>
+                            <button @click="activeTab = 'watercolor'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'watercolor', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'watercolor'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Watercolor</button>
+                            <button @click="activeTab = 'minimalist'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'minimalist', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'minimalist'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Minimalist</button>
+                            <button @click="activeTab = 'serba70k'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'serba70k', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'serba70k'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema SERBA 70K</button>
+                        </div>
+                    </div>
+
+                    <!-- Category Tabs - Non-Wedding -->
+                    <div x-show="activeCatalog === 'nonwedding'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
+                        <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 scroll-animate overflow-x-auto pb-2">
+                            <button @click="activeTab = 'engagement'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'engagement', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'engagement'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Engagement</button>
+                            <button @click="activeTab = 'anniversary'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'anniversary', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'anniversary'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Anniversary</button>
+                            <button @click="activeTab = 'aqiqah'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'aqiqah', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'aqiqah'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Aqiqah</button>
+                            <button @click="activeTab = 'khitan'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'khitan', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'khitan'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Khitan</button>
+                            <button @click="activeTab = 'birthday'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'birthday', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'birthday'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Birthday</button>
+                            <button @click="activeTab = 'others'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'others', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'others'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Others</button>
+                        </div>
+                    </div>
+
+                    <!-- Theme Cards Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
+                        ${this.renderCatalogThemes()}
+                    </div>
+                </div>
+            </section>
+        `;
+    },
+
+    // ===== CATALOG THEMES RENDERER =====
+    renderCatalogThemes() {
+        const allCategories = ['premium', 'adat', 'flora', 'watercolor', 'minimalist', 'serba70k', 'engagement', 'anniversary', 'aqiqah', 'khitan', 'birthday', 'others'];
+
+        return allCategories.map(catId => {
+            const themes = THEMES_DATA.getThemesByCategory(catId);
+            const themeCards = themes.map(theme => this.renderThemeCard(theme)).join('');
+
+            return `
+                <template x-if="activeTab === '${catId}'">
+                    <div class="contents">
+                        ${themeCards}
+                    </div>
+                </template>
+            `;
+        }).join('');
+    },
+
     // ===== THEMES SECTION =====
     renderThemes() {
         const categories = THEMES_DATA.categories.map(cat => `
