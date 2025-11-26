@@ -198,7 +198,7 @@ const Components = {
     // ===== CATALOG SECTION =====
     renderCatalog() {
         return `
-            <section id="catalog" class="py-10 sm:py-14 md:py-16 bg-section-alt" x-data="{ activeCatalog: 'wedding', activeTab: 'premium' }">
+            <section id="catalog" class="py-10 sm:py-14 md:py-16 bg-section-alt" x-data="{ activeCatalog: 'wedding', activeTab: 'luxe' }">
                 <div class="container mx-auto px-4 sm:px-6">
                     <!-- Section Header -->
                     <div class="text-center mb-8 sm:mb-10 scroll-animate">
@@ -209,7 +209,7 @@ const Components = {
                     <!-- Catalog Buttons -->
                     <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-2xl mx-auto scroll-animate">
                         <!-- Katalog Wedding Button -->
-                        <button @click="activeCatalog = 'wedding'; activeTab = 'premium'"
+                        <button @click="activeCatalog = 'wedding'; activeTab = 'luxe'"
                                 :class="activeCatalog === 'wedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-lg' : 'bg-white text-brand-dark border border-amber-200 hover:border-brand-gold shadow-md hover:shadow-lg'"
                                 class="group relative flex-1 overflow-hidden rounded-xl px-4 py-3 sm:px-5 sm:py-4 transition-all duration-300 hover:scale-[1.02] active:scale-95">
                             <!-- Background decoration -->
@@ -258,7 +258,7 @@ const Components = {
                     <!-- Category Tabs - Wedding -->
                     <div x-show="activeCatalog === 'wedding'" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-95" x-transition:enter-end="opacity-100 transform scale-100">
                         <div class="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 scroll-animate overflow-x-auto pb-2">
-                            <button @click="activeTab = 'premium'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'premium', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'premium'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Premium</button>
+                            <button @click="activeTab = 'luxe'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'luxe', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'luxe'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Luxe</button>
                             <button @click="activeTab = 'adat'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'adat', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'adat'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Adat</button>
                             <button @click="activeTab = 'flora'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'flora', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'flora'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Floral</button>
                             <button @click="activeTab = 'watercolor'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'watercolor', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'watercolor'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Watercolor</button>
@@ -290,7 +290,7 @@ const Components = {
 
     // ===== CATALOG THEMES RENDERER =====
     renderCatalogThemes() {
-        const allCategories = ['premium', 'adat', 'flora', 'watercolor', 'minimalist', 'serba70k', 'engagement', 'anniversary', 'aqiqah', 'khitan', 'birthday', 'others'];
+        const allCategories = ['luxe', 'adat', 'flora', 'watercolor', 'minimalist', 'serba70k', 'engagement', 'anniversary', 'aqiqah', 'khitan', 'birthday', 'others'];
 
         return allCategories.map(catId => {
             const themes = THEMES_DATA.getThemesByCategory(catId);
@@ -331,7 +331,7 @@ const Components = {
 
         return `
             <section id="themes" class="py-10 sm:py-14 md:py-16 bg-section-alt">
-                <div class="container mx-auto px-4 sm:px-6" x-data="{ activeTab: 'premium' }">
+                <div class="container mx-auto px-4 sm:px-6" x-data="{ activeTab: 'luxe' }">
                     <div class="text-center mb-6 sm:mb-8 scroll-animate">
                         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold font-serif text-brand-dark">Pilihan <span class="text-brand-gold">Tema</span></h2>
                         <p class="mt-2 text-sm sm:text-base">Pilih dari berbagai kategori tema yang telah kami siapkan.</p>
