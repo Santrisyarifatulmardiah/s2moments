@@ -192,343 +192,325 @@ const THEMES_DATA = {
 
         // ========== TEMA ADAT ==========
         {
-            id: 'adat-sriwijaya',
-            category: 'adat',
-            name: 'Adat Sriwijaya',
-            image: 'https://placehold.co/600x800/DC143C/FFD700?text=Adat+Sriwijaya',
-            originalPrice: 120000,
-            price: 89000,
-            demoUrl: null
-        },
-        {
             id: 'adat-minang',
             category: 'adat',
-            name: 'Adat Minang',
-            image: 'https://placehold.co/600x800/FFD700/800000?text=Adat+Minang',
+            name: 'Adat - Minang',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minang.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-minang/'
         },
         {
             id: 'adat-bali',
             category: 'adat',
-            name: 'Adat Bali',
-            image: 'https://placehold.co/600x800/DAA520/000000?text=Adat+Bali',
+            name: 'Adat - Bali',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Bali.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-bali/'
         },
         {
             id: 'adat-jawa',
             category: 'adat',
-            name: 'Adat Jawa',
-            image: 'https://placehold.co/600x800/8B4513/FFFFFF?text=Adat+Jawa',
+            name: 'Adat - Jawa',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Jawa.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-jawa/'
         },
         {
             id: 'adat-jawa-batik',
             category: 'adat',
-            name: 'Adat Jawa - Batik',
-            image: 'https://placehold.co/600x800/654321/FFD700?text=Adat+Jawa+Batik',
+            name: 'Adat - Jawa (Batik)',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Jawa_Batik.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-jawa-batik/'
         },
         {
             id: 'adat-sunda',
             category: 'adat',
-            name: 'Adat Sunda',
-            image: 'https://placehold.co/600x800/228B22/FFFFFF?text=Adat+Sunda',
+            name: 'Adat - Sunda',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Sunda.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-sunda/'
         },
         {
             id: 'adat-batak',
             category: 'adat',
-            name: 'Adat Batak',
-            image: 'https://placehold.co/600x800/000080/FFFFFF?text=Adat+Batak',
+            name: 'Adat - Batak',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Batak.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-batak/'
         },
         {
             id: 'adat-banjar',
             category: 'adat',
-            name: 'Adat Banjar',
-            image: 'https://placehold.co/600x800/FF8C00/FFFFFF?text=Adat+Banjar',
+            name: 'Adat - Banjar',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Banjar.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-banjar/'
         },
         {
             id: 'adat-betawi',
             category: 'adat',
-            name: 'Adat Betawi',
-            image: 'https://placehold.co/600x800/B22222/FFFFFF?text=Adat+Betawi',
+            name: 'Adat - Betawi',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Betawi.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-betawi/'
         },
         {
             id: 'adat-bugis',
             category: 'adat',
-            name: 'Adat Bugis',
-            image: 'https://placehold.co/600x800/8B0000/FFD700?text=Adat+Bugis',
+            name: 'Adat - Bugis',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Bugis.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-bugis/'
         },
         {
             id: 'adat-kalimantan',
             category: 'adat',
-            name: 'Adat Kalimantan',
-            image: 'https://placehold.co/600x800/8B4513/FFD700?text=Adat+Kalimantan',
+            name: 'Adat - Kalimantan',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Kalimantan.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-kalimantan/'
         },
         {
             id: 'adat-papua',
             category: 'adat',
-            name: 'Adat Papua',
-            image: 'https://placehold.co/600x800/CD853F/000000?text=Adat+Papua',
+            name: 'Adat - Papua',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Papua.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/adat-papua/'
         },
 
         // ========== TEMA FLORA ==========
         {
             id: 'floral-01',
             category: 'flora',
-            name: 'Floral 01',
-            image: 'https://placehold.co/600x800/FFC0CB/000000?text=Floral+01',
+            name: 'Luxee Floral - 01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-01.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
-        },
-        {
-            id: 'floral-02',
-            category: 'flora',
-            name: 'Floral 02',
-            image: 'https://placehold.co/600x800/E6E6FA/000000?text=Floral+02',
-            originalPrice: 120000,
-            price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-01/'
         },
         {
             id: 'floral-03',
             category: 'flora',
-            name: 'Floral 03',
-            image: 'https://placehold.co/600x800/90EE90/000000?text=Floral+03',
+            name: 'Luxee Floral - 03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-03.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
-        },
-        {
-            id: 'floral-04',
-            category: 'flora',
-            name: 'Floral 04',
-            image: 'https://placehold.co/600x800/FFB6C1/000000?text=Floral+04',
-            originalPrice: 120000,
-            price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-03/'
         },
         {
             id: 'floral-05',
             category: 'flora',
-            name: 'Floral 05',
-            image: 'https://placehold.co/600x800/87CEEB/000000?text=Floral+05',
+            name: 'Luxee Floral - 05',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-05.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-05/'
         },
         {
             id: 'floral-06',
             category: 'flora',
-            name: 'Floral 06',
-            image: 'https://placehold.co/600x800/FF7F50/FFFFFF?text=Floral+06',
+            name: 'Luxee Floral - 06',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-06.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-06/'
         },
         {
             id: 'floral-07',
             category: 'flora',
-            name: 'Floral 07',
-            image: 'https://placehold.co/600x800/DDA0DD/000000?text=Floral+07',
+            name: 'Luxee Floral - 07',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-07.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-07/'
         },
         {
             id: 'floral-08',
             category: 'flora',
-            name: 'Floral 08',
-            image: 'https://placehold.co/600x800/F0E68C/000000?text=Floral+08',
+            name: 'Luxee Floral - 08',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-08.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-08/'
         },
         {
             id: 'floral-09',
             category: 'flora',
-            name: 'Floral 09',
-            image: 'https://placehold.co/600x800/98FB98/000000?text=Floral+09',
+            name: 'Luxee Floral - 09',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-09.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-09/'
         },
         {
             id: 'floral-10',
             category: 'flora',
-            name: 'Floral 10',
-            image: 'https://placehold.co/600x800/FFE4E1/000000?text=Floral+10',
+            name: 'Luxee Floral - 10',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Luxee-Floral-10.jpg',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/demo-floral-10/'
         },
 
         // ========== TEMA WATERCOLOR ==========
         {
             id: 'watercolor-01',
             category: 'watercolor',
-            name: 'Watercolor 01',
-            image: 'https://placehold.co/600x800/ADD8E6/000000?text=Watercolor+01',
+            name: 'Luxee Watercolor - 01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1028.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/watercolor-04/'
         },
         {
             id: 'watercolor-02',
             category: 'watercolor',
-            name: 'Watercolor 02',
-            image: 'https://placehold.co/600x800/F0E68C/000000?text=Watercolor+02',
+            name: 'Luxee Watercolor - 02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1026.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/watercolor-02/'
         },
         {
             id: 'watercolor-03',
             category: 'watercolor',
-            name: 'Watercolor 03',
-            image: 'https://placehold.co/600x800/FFB6C1/000000?text=Watercolor+03',
+            name: 'Luxee Watercolor - 03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1027.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/watercolor-03/'
         },
         {
             id: 'watercolor-04',
             category: 'watercolor',
-            name: 'Watercolor 04',
-            image: 'https://placehold.co/600x800/E6E6FA/000000?text=Watercolor+04',
+            name: 'Luxee Watercolor - 04',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1025.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/tema/watercolor-01/'
         },
 
         // ========== TEMA MINIMALIST ==========
         {
-            id: 'minimalist-overlay',
-            category: 'minimalist',
-            name: 'Overlay Shadow',
-            image: 'https://placehold.co/600x800/555555/FFFFFF?text=Overlay+Shadow',
-            originalPrice: 100000,
-            price: 79000,
-            demoUrl: null
-        },
-        {
             id: 'minimalist-01',
             category: 'minimalist',
-            name: 'Minimalist 01',
-            image: 'https://placehold.co/600x800/F5F5F5/000000?text=Minimalist+01',
+            name: 'Luxee Minimalist - 01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_01.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-01/'
         },
         {
             id: 'minimalist-02',
             category: 'minimalist',
-            name: 'Minimalist 02',
-            image: 'https://placehold.co/600x800/000000/FFFFFF?text=Minimalist+02',
+            name: 'Luxee Minimalist - 02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_02.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-02/'
         },
         {
             id: 'minimalist-03',
             category: 'minimalist',
-            name: 'Minimalist 03',
-            image: 'https://placehold.co/600x800/EEEEEE/333333?text=Minimalist+03',
+            name: 'Luxee Minimalist - 03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_03.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-03/'
         },
         {
             id: 'minimalist-04',
             category: 'minimalist',
-            name: 'Minimalist 04',
-            image: 'https://placehold.co/600x800/FFFFFF/000000?text=Minimalist+04',
+            name: 'Luxee Minimalist - 04',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_04.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-04/'
         },
         {
             id: 'minimalist-05',
             category: 'minimalist',
-            name: 'Minimalist 05',
-            image: 'https://placehold.co/600x800/36454F/FFFFFF?text=Minimalist+05',
+            name: 'Luxee Minimalist - 05',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_05.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-05/'
         },
         {
             id: 'minimalist-06',
             category: 'minimalist',
-            name: 'Minimalist 06',
-            image: 'https://placehold.co/600x800/F0E68C/000000?text=Minimalist+06',
+            name: 'Luxee Minimalist - 06',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_06.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-06/'
         },
         {
             id: 'minimalist-07',
             category: 'minimalist',
-            name: 'Minimalist 07',
-            image: 'https://placehold.co/600x800/2C3E50/FFFFFF?text=Minimalist+07',
+            name: 'Luxee Minimalist - 07',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_07.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-07/'
         },
         {
             id: 'minimalist-08',
             category: 'minimalist',
-            name: 'Minimalist 08',
-            image: 'https://placehold.co/600x800/ECF0F1/2C3E50?text=Minimalist+08',
+            name: 'Luxee Minimalist - 08',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_08.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-08/'
         },
         {
             id: 'minimalist-09',
             category: 'minimalist',
-            name: 'Minimalist 09',
-            image: 'https://placehold.co/600x800/34495E/FFFFFF?text=Minimalist+09',
+            name: 'Luxee Minimalist - 09',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_09.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-09/'
         },
         {
             id: 'minimalist-10',
             category: 'minimalist',
-            name: 'Minimalist 10',
-            image: 'https://placehold.co/600x800/BDC3C7/2C3E50?text=Minimalist+10',
+            name: 'Luxee Minimalist - 10',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee_Minimalist_10.webp',
             originalPrice: 100000,
             price: 79000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/minimalist-10/'
+        },
+        {
+            id: 'minimalist-overlay',
+            category: 'minimalist',
+            name: 'Luxee Overlay Shadow',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Mockup-Overlay-Shadow.png',
+            originalPrice: 100000,
+            price: 79000,
+            demoUrl: 'https://luxee.net/tema/overlay-shadow-01/'
+        },
+        {
+            id: 'minimalist-elegant-02',
+            category: 'minimalist',
+            name: 'Luxee Elegant 02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1029.webp',
+            originalPrice: 100000,
+            price: 79000,
+            demoUrl: 'https://luxee.net/tema/elegant-02/'
         },
 
         // ========== TEMA SERBA 70K ==========
@@ -627,38 +609,38 @@ const THEMES_DATA = {
         {
             id: 'engagement-01',
             category: 'engagement',
-            name: 'Engagement 01',
-            image: 'https://placehold.co/600x800/FFB6C1/000000?text=Engagement+01',
+            name: 'Engagement Day - 01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1056.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/engagement-day/'
         },
         {
             id: 'engagement-02',
             category: 'engagement',
-            name: 'Engagement 02',
-            image: 'https://placehold.co/600x800/FFC0CB/000000?text=Engagement+02',
+            name: 'Engagement Day - 02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1057.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/engagement-day-02/'
         },
         {
             id: 'engagement-03',
             category: 'engagement',
-            name: 'Engagement 03',
-            image: 'https://placehold.co/600x800/FFE4E1/8B4513?text=Engagement+03',
+            name: 'Engagement Day - 03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1058.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/engagement-floral-01/'
         },
         {
             id: 'engagement-04',
             category: 'engagement',
-            name: 'Engagement 04',
-            image: 'https://placehold.co/600x800/F0E68C/8B4513?text=Engagement+04',
+            name: 'Engagement Day - 04',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1059.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/engagement-floral-02/'
         },
 
         // ========== TEMA ANNIVERSARY ==========
@@ -666,19 +648,19 @@ const THEMES_DATA = {
             id: 'anniversary-01',
             category: 'anniversary',
             name: 'Anniversary 01',
-            image: 'https://placehold.co/600x800/DC143C/FFFFFF?text=Anniversary+01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1060.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/anniversary-inv-01/'
         },
         {
             id: 'anniversary-02',
             category: 'anniversary',
             name: 'Anniversary 02',
-            image: 'https://placehold.co/600x800/FF1493/FFFFFF?text=Anniversary+02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1061.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/anniversary-inv-02/'
         },
 
         // ========== TEMA AQIQAH ==========
@@ -686,19 +668,19 @@ const THEMES_DATA = {
             id: 'aqiqah-01',
             category: 'aqiqah',
             name: 'Aqiqah 01',
-            image: 'https://placehold.co/600x800/87CEEB/FFFFFF?text=Aqiqah+01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1054.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-tasmiyah-aqiqah-01/'
         },
         {
             id: 'aqiqah-02',
             category: 'aqiqah',
             name: 'Aqiqah 02',
-            image: 'https://placehold.co/600x800/FFB6C1/FFFFFF?text=Aqiqah+02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1055.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-tasmiyah-aqiqah-02/'
         },
 
         // ========== TEMA KHITAN ==========
@@ -706,28 +688,28 @@ const THEMES_DATA = {
             id: 'khitan-01',
             category: 'khitan',
             name: 'Khitan 01',
-            image: 'https://placehold.co/600x800/4169E1/FFFFFF?text=Khitan+01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1051.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/khitan-01/'
         },
         {
             id: 'khitan-02',
             category: 'khitan',
             name: 'Khitan 02',
-            image: 'https://placehold.co/600x800/1E90FF/FFFFFF?text=Khitan+02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1052.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/khitan-02/'
         },
         {
             id: 'khitan-03',
             category: 'khitan',
             name: 'Khitan 03',
-            image: 'https://placehold.co/600x800/00BFFF/FFFFFF?text=Khitan+03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1053.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/khitan-03/'
         },
 
         // ========== TEMA BIRTHDAY ==========
@@ -735,37 +717,37 @@ const THEMES_DATA = {
             id: 'birthday-01',
             category: 'birthday',
             name: 'Birthday 01',
-            image: 'https://placehold.co/600x800/FF69B4/FFFFFF?text=Birthday+01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1062.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-birthday-17-girl/'
         },
         {
             id: 'birthday-02',
             category: 'birthday',
             name: 'Birthday 02',
-            image: 'https://placehold.co/600x800/FF1493/FFFFFF?text=Birthday+02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1063.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-birthday-17-boy/'
         },
         {
             id: 'birthday-03',
             category: 'birthday',
             name: 'Birthday 03',
-            image: 'https://placehold.co/600x800/FFB6C1/000000?text=Birthday+03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1064.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-birthday-perempuan/'
         },
         {
             id: 'birthday-04',
             category: 'birthday',
             name: 'Birthday 04',
-            image: 'https://placehold.co/600x800/FFC0CB/000000?text=Birthday+04',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1065.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-birthday-pria/'
         },
 
         // ========== TEMA OTHERS ==========
@@ -773,127 +755,118 @@ const THEMES_DATA = {
             id: 'bridal-shower',
             category: 'others',
             name: 'Bridal Shower',
-            image: 'https://placehold.co/600x800/FFE4E1/8B4513?text=Bridal+Shower',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1078.png',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/bridal-shower/'
         },
         {
             id: 'walimatussafar',
             category: 'others',
             name: 'Walimatussafar',
-            image: 'https://placehold.co/600x800/4169E1/FFFFFF?text=Walimatussafar',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1066.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-walimatussafar/'
         },
         {
             id: 'kajian-islami',
             category: 'others',
             name: 'Kajian Islami',
-            image: 'https://placehold.co/600x800/228B22/FFFFFF?text=Kajian+Islami',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1067.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-kajian-islami/'
         },
         {
             id: 'pengukuhan-guru-besar',
             category: 'others',
             name: 'Pengukuhan Guru Besar',
-            image: 'https://placehold.co/600x800/2C3E50/FFFFFF?text=Pengukuhan+GB',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1068.webp',
             originalPrice: 130000,
             price: 99000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-pengukuhan-guru-besar/'
         },
         {
             id: 'wisuda-mahasiswa',
             category: 'others',
             name: 'Wisuda (Mahasiswa)',
-            image: 'https://placehold.co/600x800/1E3A8A/FFFFFF?text=Wisuda+Mhs',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1069.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-wisuda-mahasiswa/'
         },
         {
             id: 'wisuda-kampus',
             category: 'others',
             name: 'Wisuda (Kampus)',
-            image: 'https://placehold.co/600x800/1E40AF/FFFFFF?text=Wisuda+Kampus',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1070.webp',
             originalPrice: 130000,
             price: 99000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-wisuda-kampus/'
         },
         {
             id: 'kelulusan-sekolah',
             category: 'others',
             name: 'Kelulusan Sekolah',
-            image: 'https://placehold.co/600x800/2563EB/FFFFFF?text=Kelulusan',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1071.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-kelulusan-sekolah/'
         },
         {
             id: 'reuni',
             category: 'others',
             name: 'Reuni',
-            image: 'https://placehold.co/600x800/DC2626/FFFFFF?text=Reuni',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1072.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/reunion-invitation/'
         },
         {
             id: 'kantor-formal',
             category: 'others',
             name: 'Kantor - Formal',
-            image: 'https://placehold.co/600x800/1F2937/FFFFFF?text=Kantor+Formal',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1073.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-kantor-formal/'
         },
         {
             id: 'rapat-formal',
             category: 'others',
             name: 'Rapat - Formal',
-            image: 'https://placehold.co/600x800/374151/FFFFFF?text=Rapat+Formal',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1074.webp',
             originalPrice: 120000,
             price: 89000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-rapat-formal/'
         },
         {
-            id: 'formal',
+            id: 'event-formal',
             category: 'others',
-            name: 'Formal',
-            image: 'https://placehold.co/600x800/4B5563/FFFFFF?text=Formal',
+            name: 'Event - Formal',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1075.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/undangan-event-formal/'
         },
         {
             id: 'event-01',
             category: 'others',
-            name: 'Event - 01',
-            image: 'https://placehold.co/600x800/7C3AED/FFFFFF?text=Event+01',
+            name: 'Event 01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1076.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/event-invitation-01/'
         },
         {
             id: 'event-02',
             category: 'others',
-            name: 'Event - 02',
-            image: 'https://placehold.co/600x800/8B5CF6/FFFFFF?text=Event+02',
+            name: 'Event 02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1077.webp',
             originalPrice: 110000,
             price: 85000,
-            demoUrl: null
-        },
-        {
-            id: 'luxee-elegant-02',
-            category: 'others',
-            name: 'Luxee Elegant 02',
-            image: 'https://placehold.co/600x800/D4AF37/000000?text=Luxee+Elegant+02',
-            originalPrice: 130000,
-            price: 99000,
-            demoUrl: null
+            demoUrl: 'https://luxee.net/premium/event-invitation-02/'
         }
     ],
 
