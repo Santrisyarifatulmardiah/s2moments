@@ -9,11 +9,50 @@ const App = {
         console.log('🚀 S2Moments App Initialized');
 
         try {
+            // Fix iOS viewport height issues
+            this.setupIOSViewportFix();
             // Render content
             this.renderContent();
         } catch (error) {
             console.error('❌ Error initializing app:', error);
             this.handleInitError(error);
+        }
+    },
+
+    // ===== iOS VIEWPORT HEIGHT FIX =====
+    // Fixes Safari iOS 26 issue where 100vh doesn't adjust for address bar
+    setupIOSViewportFix() {
+        const setViewportHeight = () => {
+            // Get the actual viewport height (accounts for address bar)
+            const vh = window.innerHeight * 0.01;
+            // Set CSS custom property
+            document.documentElement.style.setProperty('--viewport-height', `${window.innerHeight}px`);
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        };
+
+        // Set on load
+        setViewportHeight();
+
+        // Update on resize (when address bar appears/disappears)
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            // Debounce to avoid excessive calls
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(setViewportHeight, 100);
+        });
+
+        // Update on orientation change
+        window.addEventListener('orientationchange', () => {
+            setTimeout(setViewportHeight, 100);
+        });
+
+        // Also update on scroll for iOS to handle address bar changes
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream) {
+            let scrollTimer;
+            window.addEventListener('scroll', () => {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(setViewportHeight, 100);
+            }, { passive: true });
         }
     },
     
