@@ -12,7 +12,6 @@ const THEMES_DATA = {
         { id: 'flora', label: 'Tema Flora' },
         { id: 'watercolor', label: 'Tema Watercolor' },
         { id: 'minimalist', label: 'Tema Minimalist' },
-        { id: 'serba70k', label: 'Tema SERBA 70K' },
         { id: 'engagement', label: 'Tema Engagement' },
         { id: 'anniversary', label: 'Tema Anniversary' },
         { id: 'aqiqah', label: 'Tema Aqiqah' },
@@ -511,98 +510,6 @@ const THEMES_DATA = {
             originalPrice: 100000,
             price: 79000,
             demoUrl: 'https://luxee.net/tema/elegant-02/'
-        },
-
-        // ========== TEMA SERBA 70K ==========
-        {
-            id: 'serba70k-01',
-            category: 'serba70k',
-            name: 'SERBA 70K - 01',
-            image: 'https://placehold.co/600x800/FF6B6B/FFFFFF?text=SERBA+70K+01',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-02',
-            category: 'serba70k',
-            name: 'SERBA 70K - 02',
-            image: 'https://placehold.co/600x800/4ECDC4/FFFFFF?text=SERBA+70K+02',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-03',
-            category: 'serba70k',
-            name: 'SERBA 70K - 03',
-            image: 'https://placehold.co/600x800/45B7D1/FFFFFF?text=SERBA+70K+03',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-04',
-            category: 'serba70k',
-            name: 'SERBA 70K - 04',
-            image: 'https://placehold.co/600x800/F7B731/FFFFFF?text=SERBA+70K+04',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-05',
-            category: 'serba70k',
-            name: 'SERBA 70K - 05',
-            image: 'https://placehold.co/600x800/5F27CD/FFFFFF?text=SERBA+70K+05',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-06',
-            category: 'serba70k',
-            name: 'SERBA 70K - 06',
-            image: 'https://placehold.co/600x800/00D2D3/FFFFFF?text=SERBA+70K+06',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-07',
-            category: 'serba70k',
-            name: 'SERBA 70K - 07',
-            image: 'https://placehold.co/600x800/FF9FF3/000000?text=SERBA+70K+07',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-08',
-            category: 'serba70k',
-            name: 'SERBA 70K - 08',
-            image: 'https://placehold.co/600x800/54A0FF/FFFFFF?text=SERBA+70K+08',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-09',
-            category: 'serba70k',
-            name: 'SERBA 70K - 09',
-            image: 'https://placehold.co/600x800/48DBFB/000000?text=SERBA+70K+09',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
-        },
-        {
-            id: 'serba70k-10',
-            category: 'serba70k',
-            name: 'SERBA 70K - 10',
-            image: 'https://placehold.co/600x800/FF6348/FFFFFF?text=SERBA+70K+10',
-            originalPrice: 90000,
-            price: 70000,
-            demoUrl: null
         },
 
         // ========== TEMA ENGAGEMENT ==========

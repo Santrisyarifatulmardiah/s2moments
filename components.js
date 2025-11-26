@@ -263,7 +263,6 @@ const Components = {
                             <button @click="activeTab = 'flora'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'flora', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'flora'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Floral</button>
                             <button @click="activeTab = 'watercolor'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'watercolor', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'watercolor'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Watercolor</button>
                             <button @click="activeTab = 'minimalist'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'minimalist', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'minimalist'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema Minimalist</button>
-                            <button @click="activeTab = 'serba70k'" :class="{'btn-gradient-gold text-white shadow-md': activeTab === 'serba70k', 'bg-white text-brand-dark hover:bg-gray-100': activeTab !== 'serba70k'}" class="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full font-semibold transition text-xs sm:text-sm whitespace-nowrap">Tema SERBA 70K</button>
                         </div>
                     </div>
 
@@ -290,7 +289,7 @@ const Components = {
 
     // ===== CATALOG THEMES RENDERER =====
     renderCatalogThemes() {
-        const allCategories = ['luxee', 'adat', 'flora', 'watercolor', 'minimalist', 'serba70k', 'engagement', 'anniversary', 'aqiqah', 'khitan', 'birthday', 'others'];
+        const allCategories = ['luxee', 'adat', 'flora', 'watercolor', 'minimalist', 'engagement', 'anniversary', 'aqiqah', 'khitan', 'birthday', 'others'];
 
         return allCategories.map(catId => {
             const themes = THEMES_DATA.getThemesByCategory(catId);
