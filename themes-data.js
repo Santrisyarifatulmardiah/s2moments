@@ -7,7 +7,7 @@
 const THEMES_DATA = {
     // ===== KATEGORI TEMA =====
     categories: [
-        { id: 'luxe', label: 'Tema Luxe' },
+        { id: 'luxee', label: 'Tema Luxee' },
         { id: 'adat', label: 'Tema Adat' },
         { id: 'flora', label: 'Tema Flora' },
         { id: 'watercolor', label: 'Tema Watercolor' },
@@ -188,6 +188,161 @@ const THEMES_DATA = {
             originalPrice: 180000,
             price: 129000,
             demoUrl: null
+        },
+
+        // ========== TEMA LUXEE ==========
+        {
+            id: 'luxee-01',
+            category: 'luxee',
+            name: 'Luxee 01',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1001.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-01/'
+        },
+        {
+            id: 'luxee-02',
+            category: 'luxee',
+            name: 'Luxee 02',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1005.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-05/'
+        },
+        {
+            id: 'luxee-03',
+            category: 'luxee',
+            name: 'Luxee 03',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1007.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-07/'
+        },
+        {
+            id: 'luxee-04',
+            category: 'luxee',
+            name: 'Luxee 04',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1002.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-02/'
+        },
+        {
+            id: 'luxee-05',
+            category: 'luxee',
+            name: 'Luxee 05',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1003.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-03/'
+        },
+        {
+            id: 'luxee-06',
+            category: 'luxee',
+            name: 'Luxee 06',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1004.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-04/'
+        },
+        {
+            id: 'luxee-07',
+            category: 'luxee',
+            name: 'Luxee 07',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1006.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-06/'
+        },
+        {
+            id: 'luxee-08',
+            category: 'luxee',
+            name: 'Luxee 08',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1008.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-08/'
+        },
+        {
+            id: 'luxee-09',
+            category: 'luxee',
+            name: 'Luxee 09',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1009.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-09/'
+        },
+        {
+            id: 'luxee-10',
+            category: 'luxee',
+            name: 'Luxee 10',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1010.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-10/'
+        },
+        {
+            id: 'luxee-11',
+            category: 'luxee',
+            name: 'Luxee 11',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1011.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-11/'
+        },
+        {
+            id: 'luxee-12',
+            category: 'luxee',
+            name: 'Luxee 12',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1012.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-12/'
+        },
+        {
+            id: 'luxee-13',
+            category: 'luxee',
+            name: 'Luxee 13',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1013.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-13/'
+        },
+        {
+            id: 'luxee-14',
+            category: 'luxee',
+            name: 'Luxee 14',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1014.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-14/'
+        },
+        {
+            id: 'luxee-15',
+            category: 'luxee',
+            name: 'Luxee 15',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1015.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-15/'
+        },
+        {
+            id: 'luxee-16',
+            category: 'luxee',
+            name: 'Luxee 16',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/1016.webp',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-16/'
+        },
+        {
+            id: 'luxee-17',
+            category: 'luxee',
+            name: 'Luxee 17',
+            image: 'https://s2moments.id/wp-content/uploads/2025/11/Luxee-premium-17.png',
+            originalPrice: 150000,
+            price: 99000,
+            demoUrl: 'https://luxee.net/premium/tema-17/'
         },
 
         // ========== TEMA ADAT ==========
