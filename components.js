@@ -198,7 +198,7 @@ const Components = {
     // ===== CATALOG SECTION =====
     renderCatalog() {
         return `
-            <section id="catalog" class="py-10 sm:py-14 md:py-16 bg-white" x-data="{ activeCatalog: 'wedding', activeTab: 'premium' }">
+            <section id="catalog" class="py-10 sm:py-14 md:py-16 bg-section-alt" x-data="{ activeCatalog: 'wedding', activeTab: 'premium' }">
                 <div class="container mx-auto px-4 sm:px-6">
                     <!-- Section Header -->
                     <div class="text-center mb-8 sm:mb-10 scroll-animate">
