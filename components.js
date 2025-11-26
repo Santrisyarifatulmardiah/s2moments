@@ -391,7 +391,47 @@ const Components = {
 
     // ===== TESTIMONIALS SECTION =====
     renderTestimonials() {
-        const testimonials = CONFIG.testimonials.list.map((t, i) => this.renderTestimonialCard(t, i)).join('');
+        const totalTestimonials = CONFIG.testimonials.list.length;
+        const testimonialCards = CONFIG.testimonials.list.map((t, i) => {
+            const stars = Array(t.rating).fill(this.icon.star).join('');
+            return `
+                <div class="flex-shrink-0 w-full px-2 sm:px-3">
+                    <div class="group relative bg-gradient-to-br from-white via-amber-50/30 to-white p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-amber-100 hover:border-brand-gold/40 h-full">
+                        <!-- Decorative quote icon -->
+                        <div class="absolute top-4 right-4 text-amber-300/40 group-hover:text-brand-gold/50 transition-colors duration-300">
+                            <svg class="w-8 h-8 sm:w-10 sm:h-10" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                            </svg>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="relative z-10">
+                            <!-- Avatar and name -->
+                            <div class="flex items-center mb-5">
+                                <div class="relative">
+                                    <div class="absolute inset-0 bg-gradient-to-br from-yellow-400 via-amber-400 to-yellow-500 rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity"></div>
+                                    <img class="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover ring-4 ring-amber-50 shadow-lg" src="${t.avatar}" alt="Avatar ${t.name}" loading="lazy">
+                                </div>
+                                <div class="ml-4">
+                                    <p class="font-bold text-lg text-brand-dark group-hover:text-brand-gold transition-colors duration-300">${t.name}</p>
+                                    <div class="flex text-amber-400 mt-1.5" aria-label="${t.rating} dari 5 bintang">
+                                        ${stars}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Testimonial text -->
+                            <p class="text-sm sm:text-base text-gray-700 leading-relaxed italic relative">
+                                <span class="text-brand-gold text-xl font-serif mr-1">"</span>${t.text}<span class="text-brand-gold text-xl font-serif ml-1">"</span>
+                            </p>
+                        </div>
+
+                        <!-- Decorative corner accent -->
+                        <div class="absolute bottom-0 right-0 w-20 h-20 bg-gradient-to-tl from-amber-200/30 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    </div>
+                </div>
+            `;
+        }).join('');
 
         return `
             <section id="testimonials" class="relative py-12 sm:py-20 overflow-hidden">
@@ -400,7 +440,19 @@ const Components = {
                 <div class="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-yellow-200/20 to-amber-300/20 rounded-full blur-3xl"></div>
                 <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-amber-200/20 to-yellow-300/20 rounded-full blur-3xl"></div>
 
-                <div class="relative container mx-auto px-4 sm:px-6">
+                <div class="relative container mx-auto px-4 sm:px-6" x-data="{
+                    currentSlide: 0,
+                    totalSlides: ${totalTestimonials},
+                    nextSlide() {
+                        this.currentSlide = (this.currentSlide + 1) % this.totalSlides;
+                    },
+                    prevSlide() {
+                        this.currentSlide = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+                    },
+                    goToSlide(index) {
+                        this.currentSlide = index;
+                    }
+                }">
                     <!-- Section header -->
                     <div class="text-center mb-12 sm:mb-16 scroll-animate">
                         <div class="inline-flex items-center justify-center mb-4">
@@ -414,9 +466,40 @@ const Components = {
                         <p class="mt-3 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">${CONFIG.testimonials.sectionSubtitle}</p>
                     </div>
 
-                    <!-- Testimonials grid -->
-                    <div class="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
-                        ${testimonials}
+                    <!-- Testimonials Carousel -->
+                    <div class="relative max-w-4xl mx-auto">
+                        <!-- Carousel Container -->
+                        <div class="overflow-hidden">
+                            <div class="flex transition-transform duration-500 ease-in-out"
+                                 :style="'transform: translateX(-' + (currentSlide * 100) + '%)'">
+                                ${testimonialCards}
+                            </div>
+                        </div>
+
+                        <!-- Navigation Arrows -->
+                        <button @click="prevSlide()"
+                                class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 z-10 bg-white hover:bg-gradient-to-br hover:from-yellow-400 hover:via-amber-400 hover:to-amber-500 text-brand-dark hover:text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border border-amber-200 hover:border-transparent">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+
+                        <button @click="nextSlide()"
+                                class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 z-10 bg-white hover:bg-gradient-to-br hover:from-yellow-400 hover:via-amber-400 hover:to-amber-500 text-brand-dark hover:text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group border border-amber-200 hover:border-transparent">
+                            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+
+                        <!-- Dots Navigation -->
+                        <div class="flex justify-center gap-2 mt-8 sm:mt-10">
+                            ${Array.from({length: totalTestimonials}, (_, i) => `
+                                <button @click="goToSlide(${i})"
+                                        :class="currentSlide === ${i} ? 'bg-gradient-to-r from-yellow-400 via-amber-400 to-amber-500 w-8 sm:w-10' : 'bg-gray-300 hover:bg-gray-400 w-3'"
+                                        class="h-3 rounded-full transition-all duration-300">
+                                </button>
+                            `).join('')}
+                        </div>
                     </div>
 
                     <!-- Bottom decoration -->
