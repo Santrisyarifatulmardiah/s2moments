@@ -36,7 +36,10 @@ const Components = {
                     <div class="mb-8 sm:mb-10 md:mb-12 scroll-animate">
                         <a href="#home" class="inline-flex items-center gap-2 sm:gap-3 group">
                             <div class="flex items-center gap-2 sm:gap-3 bg-white/80 backdrop-blur-sm px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-amber-100/50 hover:border-brand-gold/40">
-                                <img src="${CONFIG.businessInfo.logo}" alt="${CONFIG.businessInfo.name} Logo" class="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300" loading="eager">
+                                <img src="${CONFIG.businessInfo.logo}" alt="${CONFIG.businessInfo.name} Logo" width="56" height="56" class="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300" loading="eager" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="hidden h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 items-center justify-center bg-gradient-to-br from-yellow-400 to-amber-500 rounded-full">
+                                    <svg class="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                </div>
                                 <span class="text-sm sm:text-base md:text-lg font-bold text-brand-gold tracking-wide group-hover:text-brand-gold-dark transition-colors">${CONFIG.businessInfo.name}</span>
                             </div>
                         </a>
@@ -76,7 +79,16 @@ const Components = {
                             </div>
                         </div>
                         <div class="mt-6 sm:mt-8 lg:mt-0 scroll-animate" data-delay="0.4s">
-                            <img src="${CONFIG.hero.image}" alt="${CONFIG.hero.imageAlt}" class="w-full max-w-xs sm:max-w-sm mx-auto lg:max-w-full" width="900" height="1200" decoding="async" fetchpriority="high">
+                            <div class="relative w-full max-w-xs sm:max-w-sm mx-auto lg:max-w-full">
+                                <img src="${CONFIG.hero.image}" alt="${CONFIG.hero.imageAlt}" width="900" height="1200" class="w-full h-auto object-contain" decoding="async" fetchpriority="high" loading="eager" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                <div class="hidden w-full aspect-[3/4] items-center justify-center bg-gradient-to-br from-amber-50 to-yellow-50 rounded-2xl border-2 border-amber-200">
+                                    <div class="text-center p-8">
+                                        <svg class="w-24 h-24 mx-auto mb-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                                        <p class="text-brand-gold font-bold text-lg">Contoh Undangan Digital</p>
+                                        <p class="text-gray-600 text-sm mt-2">S2Moments</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -95,13 +107,13 @@ const Components = {
         ];
 
         const features = CONFIG.whyChooseUs.features.map((feature, index) => `
-            <div class="why-choose-card scroll-animate card-hover-effect rounded-2xl border border-gray-100 bg-white p-4 text-center sm:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 grid-item-fix" data-delay="${index * 0.1}s">
-                <div class="why-icon-wrapper mx-auto mb-4 flex h-16 w-16 sm:h-20 sm:w-20 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${gradients[index]} shadow-md transform hover:scale-110 hover:rotate-3 transition-all duration-300">
+            <div class="why-choose-card scroll-animate card-hover-effect rounded-2xl border border-gray-100 bg-white p-3 sm:p-4 md:p-6 text-center shadow-lg hover:shadow-2xl transition-all duration-300 grid-item-fix" data-delay="${index * 0.1}s">
+                <div class="why-icon-wrapper mx-auto mb-3 sm:mb-4 flex h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 flex-shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${gradients[index]} shadow-md transform hover:scale-110 hover:rotate-3 transition-all duration-300">
                     ${feature.icon}
                 </div>
                 <div class="flex flex-col justify-center">
-                    <h3 class="font-bold text-brand-dark text-sm sm:text-base md:text-lg">${feature.title}</h3>
-                    <p class="mt-1 text-xs sm:text-sm text-gray-600">${feature.description}</p>
+                    <h3 class="font-bold text-brand-dark text-xs sm:text-sm md:text-base lg:text-lg mb-1">${feature.title}</h3>
+                    <p class="text-xs text-gray-600">${feature.description}</p>
                 </div>
             </div>
         `).join('');
@@ -136,11 +148,11 @@ const Components = {
         ];
 
         const featureList = CONFIG.features.list.map((feature, index) => `
-            <div class="feature-card text-center p-4 sm:p-6 bg-white rounded-2xl border border-gray-100 scroll-animate shadow-lg hover:shadow-2xl transition-all duration-300" data-delay="${index * 0.1}s">
-                <div class="feature-icon-wrapper mb-4 mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-br ${gradients[index % gradients.length]} rounded-2xl flex items-center justify-center transform hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-md">
+            <div class="feature-card text-center p-3 sm:p-4 md:p-6 bg-white rounded-2xl border border-gray-100 scroll-animate shadow-lg hover:shadow-2xl transition-all duration-300" data-delay="${index * 0.1}s">
+                <div class="feature-icon-wrapper mb-3 sm:mb-4 mx-auto w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br ${gradients[index % gradients.length]} rounded-2xl flex items-center justify-center transform hover:scale-110 hover:rotate-3 transition-all duration-300 shadow-md">
                 ${feature.icon}
                 </div>
-                <h3 class="text-xs sm:text-base md:text-lg font-bold text-brand-dark">${feature.title}</h3>
+                <h3 class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-brand-dark">${feature.title}</h3>
             </div>
         `).join('');
 
@@ -176,8 +188,14 @@ const Components = {
         
         return `
             <div class="bg-white rounded-xl shadow-lg overflow-hidden card-hover-effect border border-gray-100">
-                <div class="overflow-hidden theme-card-image">
-                    <img src="${theme.image}" alt="Tema ${theme.name}" class="w-full h-full object-cover object-top transition-transform duration-500" loading="lazy">
+                <div class="overflow-hidden theme-card-image relative bg-gray-100">
+                    <img src="${theme.image}" alt="Tema ${theme.name}" width="400" height="600" class="w-full h-full object-cover object-top transition-transform duration-500" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hidden absolute inset-0 items-center justify-center bg-gradient-to-br from-amber-50 to-yellow-50">
+                        <div class="text-center p-4">
+                            <svg class="w-16 h-16 mx-auto mb-2 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                            <p class="text-brand-gold font-bold text-sm">${theme.name}</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-3 sm:p-4 md:p-5 text-center">
                     <h3 class="text-sm sm:text-base md:text-lg font-bold text-brand-dark truncate">${theme.name}</h3>
@@ -534,10 +552,23 @@ const Components = {
 
                     <!-- Payment Methods Image -->
                     <div class="max-w-4xl mx-auto">
-                        <img src="${CONFIG.paymentMethods.image}"
-                             alt="${CONFIG.paymentMethods.imageAlt}"
-                             class="w-full h-auto"
-                             loading="lazy">
+                        <div class="relative w-full">
+                            <img src="${CONFIG.paymentMethods.image}"
+                                 alt="${CONFIG.paymentMethods.imageAlt}"
+                                 width="1200"
+                                 height="300"
+                                 class="w-full h-auto object-contain"
+                                 loading="lazy"
+                                 decoding="async"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                            <div class="hidden w-full items-center justify-center bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl border-2 border-amber-200 p-8">
+                                <div class="text-center">
+                                    <svg class="w-16 h-16 mx-auto mb-4 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                                    <p class="text-brand-gold font-bold text-base">Metode Pembayaran</p>
+                                    <p class="text-gray-600 text-sm mt-2">Transfer Bank, E-Wallet, QRIS</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -622,7 +653,12 @@ const Components = {
                     <div class="max-w-4xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-2xl shadow-lg scroll-animate" data-delay="0.2s">
                         <div class="grid md:grid-cols-2 gap-6 items-center">
                             <div class="text-center order-2 md:order-1">
-                                <img src="${CONFIG.contactSection.mascot}" alt="S2Moments Mascot" class="inline-block h-32 sm:h-40 md:h-56" loading="lazy">
+                                <div class="relative inline-block">
+                                    <img src="${CONFIG.contactSection.mascot}" alt="S2Moments Mascot" width="224" height="224" class="inline-block h-32 w-auto sm:h-40 md:h-56 object-contain" loading="lazy" decoding="async" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    <div class="hidden items-center justify-center">
+                                        <svg class="h-32 w-32 sm:h-40 sm:w-40 md:h-56 md:w-56 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                                    </div>
+                                </div>
                             </div>
                             <div class="text-center md:text-left order-1 md:order-2">
                                 <p class="text-sm sm:text-base md:text-lg">${CONFIG.contactSection.description}</p>
