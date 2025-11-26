@@ -7,6 +7,12 @@
     -webkit-tap-highlight-color: transparent;
 }
 
+/* iOS Viewport Height Fix - Set CSS custom properties for stable viewport */
+:root {
+    --viewport-height: 100vh;
+    --safe-area-inset-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-main); /* Warm Cream Background */
@@ -485,6 +491,115 @@ img {
 /* Smooth hover for floating buttons */
 .fixed:hover {
     transform: scale(1.1);
+}
+
+/* ===== iOS SAFARI FIXED POSITION FIX ===== */
+/*
+   iOS Safari 26 Bug Fixes:
+
+   1. Fixed Position Elements Shift: When users scroll on iOS Safari 26, the address bar
+      shows/hides dynamically. This causes elements with position: fixed to shift or jump
+      to the center of the screen.
+
+   2. 100vh Viewport Height Issues: In Safari iOS 26, 100vh always uses window.outerHeight
+      and doesn't account for the dynamic address bar, causing layout issues.
+
+   Solutions Applied:
+   - Force GPU acceleration with transform: translateZ(0) to prevent layout shifts
+   - Use CSS containment to isolate fixed elements from layout changes
+   - Implement JavaScript-based viewport height calculation (--viewport-height custom property)
+   - Add hardware acceleration and backface-visibility to prevent rendering issues
+   - Disable overscroll behavior to prevent rubber band effect from affecting fixed elements
+*/
+@supports (-webkit-touch-callout: none) {
+    /* Target iOS devices */
+    .fixed {
+        /* Force GPU acceleration to prevent layout shifts */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        /* Prevent repainting on scroll */
+        will-change: transform;
+        /* Use hardware acceleration */
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        /* Prevent rendering issues */
+        -webkit-perspective: 1000;
+        perspective: 1000;
+    }
+
+    /* Specific fix for bottom navigation */
+    nav.fixed {
+        /* Use safe area inset for proper spacing on iOS */
+        padding-bottom: max(env(safe-area-inset-bottom), 0px);
+        /* Ensure it stays at the bottom */
+        bottom: 0;
+        /* Prevent shifting by forcing containment */
+        contain: layout style paint;
+        /* Additional fix to prevent shifting on scroll */
+        position: -webkit-sticky;
+        position: fixed;
+        /* Lock position */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* Prevent body scroll bounce that causes position shifts */
+    body {
+        /* iOS-specific: prevent elastic scrolling at top/bottom */
+        overscroll-behavior-y: none;
+    }
+
+    /* Fix for any full-height sections */
+    .min-h-screen,
+    .h-screen {
+        /* Use custom property instead of 100vh */
+        min-height: var(--viewport-height, 100vh);
+        height: var(--viewport-height, 100vh);
+    }
+}
+
+/* Additional iOS-specific fixes that work across all iOS browsers */
+@media only screen and (max-width: 768px) {
+    /* Ensure fixed navigation doesn't shift on iOS */
+    nav.fixed {
+        /* Force compositing layer */
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        /* Isolate from document flow changes */
+        isolation: isolate;
+        /* Prevent layout shift by locking the layer */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+
+    /* Prevent scroll-triggered layout shifts */
+    body {
+        /* Disable overscroll on mobile to prevent rubber band effect */
+        overscroll-behavior-y: contain;
+    }
+}
+
+/* ===== VIEWPORT HEIGHT UTILITIES ===== */
+/* Use these classes instead of 100vh for better iOS compatibility */
+.full-viewport-height {
+    /* Use custom property that accounts for iOS address bar */
+    height: var(--viewport-height, 100vh);
+    min-height: var(--viewport-height, 100vh);
+}
+
+.min-viewport-height {
+    min-height: var(--viewport-height, 100vh);
+}
+
+/* Override Tailwind's h-screen and min-h-screen on mobile for iOS compatibility */
+@media only screen and (max-width: 768px) {
+    .h-screen {
+        height: var(--viewport-height, 100vh) !important;
+    }
+
+    .min-h-screen {
+        min-height: var(--viewport-height, 100vh) !important;
+    }
 }
 
 /* ===== SKELETON LOADING (Optional for future) ===== */
