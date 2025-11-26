@@ -207,47 +207,51 @@ const Components = {
                     </div>
 
                     <!-- Catalog Buttons -->
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 mb-8 sm:mb-10 max-w-4xl mx-auto scroll-animate">
+                    <div class="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 mb-8 sm:mb-10 max-w-2xl mx-auto scroll-animate">
                         <!-- Katalog Wedding Button -->
                         <button @click="activeCatalog = 'wedding'; activeTab = 'premium'"
-                                :class="activeCatalog === 'wedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-2xl scale-105' : 'bg-white text-brand-dark border-2 border-amber-200 hover:border-brand-gold shadow-lg hover:shadow-xl'"
-                                class="group relative flex-1 overflow-hidden rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 active:scale-95">
+                                :class="activeCatalog === 'wedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-lg' : 'bg-white text-brand-dark border border-amber-200 hover:border-brand-gold shadow-md hover:shadow-lg'"
+                                class="group relative flex-1 overflow-hidden rounded-xl px-4 py-3 sm:px-5 sm:py-4 transition-all duration-300 hover:scale-[1.02] active:scale-95">
                             <!-- Background decoration -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-amber-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                            <!-- Icon -->
-                            <div class="relative flex justify-center mb-4">
-                                <div :class="activeCatalog === 'wedding' ? 'bg-white/20' : 'bg-gradient-to-br from-yellow-400 to-amber-500'" class="inline-flex p-4 rounded-full">
-                                    <svg class="w-10 h-10 sm:w-12 sm:h-12" :class="activeCatalog === 'wedding' ? 'text-white' : 'text-white'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Content -->
+                            <div class="relative flex items-center justify-center gap-3">
+                                <!-- Icon -->
+                                <div :class="activeCatalog === 'wedding' ? 'bg-white/20' : 'bg-gradient-to-br from-yellow-400 to-amber-500'" class="inline-flex p-2 rounded-lg">
+                                    <svg class="w-5 h-5 sm:w-6 sm:h-6" :class="activeCatalog === 'wedding' ? 'text-white' : 'text-white'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                                     </svg>
                                 </div>
+                                <!-- Text -->
+                                <div class="text-left">
+                                    <h3 class="text-base sm:text-lg font-bold font-serif">Katalog Wedding</h3>
+                                    <p class="text-xs sm:text-sm opacity-80 hidden sm:block">Acara pernikahan</p>
+                                </div>
                             </div>
-
-                            <!-- Text -->
-                            <h3 class="relative text-xl sm:text-2xl font-bold font-serif mb-2">Katalog Wedding</h3>
-                            <p class="relative text-sm sm:text-base opacity-90">Tema untuk acara pernikahan</p>
                         </button>
 
                         <!-- Katalog Non-Wedding Button -->
                         <button @click="activeCatalog = 'nonwedding'; activeTab = 'engagement'"
-                                :class="activeCatalog === 'nonwedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-2xl scale-105' : 'bg-white text-brand-dark border-2 border-amber-200 hover:border-brand-gold shadow-lg hover:shadow-xl'"
-                                class="group relative flex-1 overflow-hidden rounded-2xl p-6 sm:p-8 transition-all duration-300 hover:scale-105 active:scale-95">
+                                :class="activeCatalog === 'nonwedding' ? 'bg-gradient-to-br from-yellow-400 via-amber-400 to-amber-500 text-white shadow-lg' : 'bg-white text-brand-dark border border-amber-200 hover:border-brand-gold shadow-md hover:shadow-lg'"
+                                class="group relative flex-1 overflow-hidden rounded-xl px-4 py-3 sm:px-5 sm:py-4 transition-all duration-300 hover:scale-[1.02] active:scale-95">
                             <!-- Background decoration -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-amber-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute inset-0 bg-gradient-to-br from-yellow-400/10 to-amber-400/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                            <!-- Icon -->
-                            <div class="relative flex justify-center mb-4">
-                                <div :class="activeCatalog === 'nonwedding' ? 'bg-white/20' : 'bg-gradient-to-br from-yellow-400 to-amber-500'" class="inline-flex p-4 rounded-full">
-                                    <svg class="w-10 h-10 sm:w-12 sm:h-12" :class="activeCatalog === 'nonwedding' ? 'text-white' : 'text-white'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Content -->
+                            <div class="relative flex items-center justify-center gap-3">
+                                <!-- Icon -->
+                                <div :class="activeCatalog === 'nonwedding' ? 'bg-white/20' : 'bg-gradient-to-br from-yellow-400 to-amber-500'" class="inline-flex p-2 rounded-lg">
+                                    <svg class="w-5 h-5 sm:w-6 sm:h-6" :class="activeCatalog === 'nonwedding' ? 'text-white' : 'text-white'" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"></path>
                                     </svg>
                                 </div>
+                                <!-- Text -->
+                                <div class="text-left">
+                                    <h3 class="text-base sm:text-lg font-bold font-serif">Katalog Non-Wedding</h3>
+                                    <p class="text-xs sm:text-sm opacity-80 hidden sm:block">Acara lainnya</p>
+                                </div>
                             </div>
-
-                            <!-- Text -->
-                            <h3 class="relative text-xl sm:text-2xl font-bold font-serif mb-2">Katalog Non-Wedding</h3>
-                            <p class="relative text-sm sm:text-base opacity-90">Tema untuk acara lainnya</p>
                         </button>
                     </div>
 
