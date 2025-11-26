@@ -33,9 +33,9 @@ const App = {
 
         mainContent.innerHTML = `
             ${Components.renderHero()}
-            ${Components.renderCatalog()}
             ${Components.renderWhyChooseUs()}
             ${Components.renderFeatures()}
+            ${Components.renderCatalog()}
             ${Components.renderTestimonials()}
             ${Components.renderFaq()}
             ${Components.renderContact()}
