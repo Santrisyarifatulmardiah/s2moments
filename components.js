@@ -440,7 +440,7 @@ const Components = {
     // ===== PAYMENT METHODS SECTION =====
     renderPaymentMethods() {
         return `
-            <section id="payment-methods" class="py-8 sm:py-10 bg-gray-50">
+            <section id="payment-methods" class="py-8 sm:py-10">
                 <div class="container mx-auto px-4 sm:px-6">
                     <!-- Section header -->
                     <div class="text-center mb-4 sm:mb-6">
@@ -454,7 +454,7 @@ const Components = {
                     <div class="max-w-4xl mx-auto">
                         <img src="${CONFIG.paymentMethods.image}"
                              alt="${CONFIG.paymentMethods.imageAlt}"
-                             class="w-full h-auto rounded-lg shadow-md"
+                             class="w-full h-auto"
                              loading="lazy">
                     </div>
                 </div>
