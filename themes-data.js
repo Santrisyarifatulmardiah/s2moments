@@ -38,7 +38,7 @@ const THEMES_DATA = {
         // ========== TEMA LUXE ==========
         {
             id: 'luxe-01',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 01',
             image: 'https://placehold.co/600x800/2C2A29/E5C158?text=Luxe+01',
             originalPrice: 150000,
@@ -47,7 +47,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-02',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 02',
             image: 'https://placehold.co/600x800/1a1918/F5C845?text=Luxe+02',
             originalPrice: 150000,
@@ -56,7 +56,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-03',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 03',
             image: 'https://placehold.co/600x800/2C2A29/FAD961?text=Luxe+03',
             originalPrice: 150000,
@@ -65,7 +65,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-04',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 04',
             image: 'https://placehold.co/600x800/332f2d/D4AF37?text=Luxe+04',
             originalPrice: 150000,
@@ -74,7 +74,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-05',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 05',
             image: 'https://placehold.co/600x800/FFFCF2/C8A02B?text=Luxe+05',
             originalPrice: 150000,
@@ -83,7 +83,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-06',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 06',
             image: 'https://placehold.co/600x800/E5C158/2C2A29?text=Luxe+06',
             originalPrice: 150000,
@@ -92,7 +92,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-07',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 07',
             image: 'https://placehold.co/600x800/1a1918/E5C158?text=Luxe+07',
             originalPrice: 150000,
@@ -101,7 +101,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-08',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 08',
             image: 'https://placehold.co/600x800/FFF8E7/C8A02B?text=Luxe+08',
             originalPrice: 150000,
@@ -110,7 +110,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-09',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 09',
             image: 'https://placehold.co/600x800/D4AF37/FFFCF2?text=Luxe+09',
             originalPrice: 150000,
@@ -119,7 +119,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-10',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 10',
             image: 'https://placehold.co/600x800/2C2A29/FAD961?text=Luxe+10',
             originalPrice: 150000,
@@ -128,7 +128,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-11',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 11',
             image: 'https://placehold.co/600x800/FFFCF2/B8941F?text=Luxe+11',
             originalPrice: 150000,
@@ -137,7 +137,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-12',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 12',
             image: 'https://placehold.co/600x800/E5C158/2C2A29?text=Luxe+12',
             originalPrice: 150000,
@@ -146,7 +146,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-13',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 13',
             image: 'https://placehold.co/600x800/2C2A29/E5C158?text=Luxe+13',
             originalPrice: 150000,
@@ -155,7 +155,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-14',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 14',
             image: 'https://placehold.co/600x800/1a1918/F5C845?text=Luxe+14',
             originalPrice: 150000,
@@ -164,7 +164,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-15',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 15',
             image: 'https://placehold.co/600x800/2C2A29/FAD961?text=Luxe+15',
             originalPrice: 150000,
@@ -173,7 +173,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-16',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe 16',
             image: 'https://placehold.co/600x800/332f2d/D4AF37?text=Luxe+16',
             originalPrice: 150000,
@@ -182,7 +182,7 @@ const THEMES_DATA = {
         },
         {
             id: 'luxe-fantasy',
-            category: 'luxe',
+            category: 'luxee',
             name: 'Luxe - Fantasy Special',
             image: 'https://placehold.co/600x800/663399/FFD700?text=Fantasy+Special',
             originalPrice: 180000,
