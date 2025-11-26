@@ -179,72 +179,8 @@ const CONFIG = {
     paymentMethods: {
         sectionTitle: "Metode <span class='text-brand-gold'>Pembayaran</span>",
         sectionSubtitle: "Kami menerima berbagai metode pembayaran untuk kemudahan Anda",
-        methods: [
-            {
-                name: "BCA",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png"
-            },
-            {
-                name: "Mandiri",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bank_Mandiri_logo_2016.svg/2560px-Bank_Mandiri_logo_2016.svg.png"
-            },
-            {
-                name: "BRI",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/BRI_2020.svg/2560px-BRI_2020.svg.png"
-            },
-            {
-                name: "BNI",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/f/f0/Bank_Negara_Indonesia_logo_%282004%29.svg "
-            },
-            {
-                name: "BSI",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Bank_Syariah_Indonesia.svg/2560px-Bank_Syariah_Indonesia.svg.png"
-            },
-            {
-                name: "BTN",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/c/ca/BTN_2024.svg"
-            },
-            {
-                name: "Permata",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/f/ff/Permata_Bank_%282024%29.svg"
-            },
-            {
-                name: "CIMB Niaga",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/3/38/CIMB_Niaga_logo.svg"
-            },
-            {
-                name: "Danamon",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/7/7b/Danamon.svg"
-            },
-            {
-                name: "Bank Mega",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/a/af/Bank_Mega_2013.svg"
-            },
-            {
-                name: "GoPay",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Gopay_logo.svg/2560px-Gopay_logo.svg.png"
-            },
-            {
-                name: "OVO",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Logo_ovo_purple.svg/2560px-Logo_ovo_purple.svg.png"
-            },
-            {
-                name: "Dana",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Logo_dana_blue.svg/2560px-Logo_dana_blue.svg.png"
-            },
-            {
-                name: "ShopeePay",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg"
-            },
-            {
-                name: "LinkAja",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/LinkAja.svg/2560px-LinkAja.svg.png"
-            },
-            {
-                name: "QRIS",
-                logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/QRIS_logo.svg/2560px-QRIS_logo.svg.png"
-            }
-        ]
+        image: "https://s2moments.id/wp-content/uploads/2025/11/payment-support-2.png",
+        imageAlt: "Metode Pembayaran S2Moments"
     },
 
     // ===== CONTACT =====

@@ -439,12 +439,6 @@ const Components = {
 
     // ===== PAYMENT METHODS SECTION =====
     renderPaymentMethods() {
-        const paymentLogos = CONFIG.paymentMethods.methods.map((method, index) => `
-            <div class="flex items-center justify-center p-2 sm:p-3 bg-white rounded-lg shadow-sm hover:shadow-md transition-all duration-300 hover:scale-105 border border-gray-100">
-                <img src="${method.logo}" alt="${method.name}" class="h-5 sm:h-6 md:h-7 w-auto object-contain" loading="lazy">
-            </div>
-        `).join('');
-
         return `
             <section id="payment-methods" class="py-8 sm:py-10 bg-gray-50">
                 <div class="container mx-auto px-4 sm:px-6">
@@ -456,11 +450,12 @@ const Components = {
                         <p class="text-xs sm:text-sm text-gray-600">${CONFIG.paymentMethods.sectionSubtitle}</p>
                     </div>
 
-                    <!-- Payment Methods Grid -->
-                    <div class="max-w-5xl mx-auto">
-                        <div class="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-2 sm:gap-3">
-                            ${paymentLogos}
-                        </div>
+                    <!-- Payment Methods Image -->
+                    <div class="max-w-4xl mx-auto">
+                        <img src="${CONFIG.paymentMethods.image}"
+                             alt="${CONFIG.paymentMethods.imageAlt}"
+                             class="w-full h-auto rounded-lg shadow-md"
+                             loading="lazy">
                     </div>
                 </div>
             </section>
